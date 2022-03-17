@@ -6,12 +6,11 @@ require 'addressable/uri'
 require 'happymapper'
 require 'net/http'
 
-
 # This module gets metadata by ip
 module Ipgeobase
   class Error < StandardError; end
 
-   def self.lookup(ip)
+  def self.lookup(ip)
     uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}")
     response = Net::HTTP.get_response(uri)
     Geo_Base.parse(response.body) if response.is_a?(Net::HTTPSuccess)
