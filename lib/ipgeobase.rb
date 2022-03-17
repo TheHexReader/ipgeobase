@@ -13,10 +13,10 @@ module Ipgeobase
   def self.lookup(ip)
     uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}")
     response = Net::HTTP.get_response(uri)
-    Geo_Base.parse(response.body) if response.is_a?(Net::HTTPSuccess)
+    GeoBase.parse(response.body) if response.is_a?(Net::HTTPSuccess)
   end
 
-  class Geo_Base
+  class GeoBase
     include HappyMapper
     tag 'query'
     element :city, String, tag: 'city'

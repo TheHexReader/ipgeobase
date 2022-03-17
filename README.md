@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/TheHexReader/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/TheHexReader/ipgeobase/actions/workflows/main.yml)
+
 # Ipgeobase
 
 This aplication gets metadata by ip.
@@ -32,5 +34,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/TheHexReader/ipgeobase.
-
-[![Ruby](https://github.com/TheHexReader/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/TheHexReader/ipgeobase/actions/workflows/main.yml)
