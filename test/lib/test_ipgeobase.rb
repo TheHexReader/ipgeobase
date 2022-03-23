@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/ipgeobase'
+require_relative '../../lib/ipgeobase'
 
 require 'test_helper'
 
@@ -14,8 +14,8 @@ class TestIpgeobase < Minitest::Test
       lon: -77.5
     }
     @test_ip = '8.8.8.8'
-    body = File.read('./test/fixtures/ip_api_stub.xml')
-    stub_request(:get, IP_API_URL + @test_ip).to_return(status: 200, body: body)
+    body = File.read('./test/lib/fixtures/ip_api_stub.xml')
+    stub_request(:get, 'http://ip-api.com/xml/' + @test_ip).to_return(status: 200, body: body)
   end
 
   def test_lookup
