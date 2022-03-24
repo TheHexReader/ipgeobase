@@ -15,7 +15,7 @@ class TestIpgeobase < Minitest::Test
     }
     @test_ip = '8.8.8.8'
     body = File.read('./test/lib/fixtures/ip_api_stub.xml')
-    stub_request(:get, "http://ip-api.com/xml/#{@test_ip}").to_return(status: 200, body: body)
+    stub_request(:get, "#{Ipgeobase::IP_API_URL}#{@test_ip}").to_return(status: 200, body: body)
   end
 
   def test_lookup
